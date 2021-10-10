@@ -1,31 +1,34 @@
 package com.mintic.appcomercio.controllers;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import com.mintic.appcomercio.models.ClienteModel;
 import com.mintic.appcomercio.services.ClienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController // Declara la clase como controlador
+@Controller // Declara la clase como controlador
 @RequestMapping("/clientes") // Define la direccion del controlador
 public class ClienteController {
 
     @Autowired
     ClienteService clienteService;
 
-    @GetMapping //Solicitud por pagina
-    public ArrayList<ClienteModel> obtenerClientes() {
-        return clienteService.obtenerClientes();
-    }
+    @GetMapping("/listarclientes")
+	public String listarclientes(Model model) {
+		List<ClienteModel> clientes = clienteService.obtenerClientes();
+		model.addAttribute("clientes", clientes);
+		return "listarClientes";
+	}
 
     @PostMapping    //Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {
