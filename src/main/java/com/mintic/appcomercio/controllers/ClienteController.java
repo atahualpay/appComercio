@@ -29,6 +29,23 @@ public class ClienteController {
 		model.addAttribute("clientes", clientes);
 		return "listarClientes";
 	}
+    
+    @GetMapping("/proveedores")
+	public String proveedores(Model model) {
+		return "proveedores";
+	}
+    
+    @GetMapping("/ventas")
+	public String ventas(Model model) {
+		return "ventas";
+	}
+    
+    
+    
+    
+    
+    
+    
 
     @PostMapping    //Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {

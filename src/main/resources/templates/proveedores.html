@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel=stylesheet type="text/css" href="estilos.css"> 
+<title>Proveedores</title>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
+			<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
+			<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
+			<li id="item"><a th:href="@{/productos}"> Productos</a></li>
+			<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
+			<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
+		</ul>
+	</div>
+	<div>
+      <div class = "clearfix"></div>
+
+		<div id = "container">
+          <section id = "content">
+            <form>
+                <div class='field'>
+                    <label>N.I.T.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input name='nit' type='name' placeholder='N.I.T' autocomplete />
+                    <label>Nombre del Proveedor</label>
+                    <input name='provedor' type='name' autocomplete />
+                </div>
+                <div class='field'>
+                    <label> Dirección&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input name='direccion' type='name' autocomplete />
+                    <label>Teléfono&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input name='telefono' type='value' autocomplete />
+                </div>
+                <div class='field'>
+                    <label> Ciudad&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input name='ciudad' type='name' autocomplete />
+                </div>            
+                <div class='submit'>
+                    <button> Consultar </button>
+                    <button> Crear </button>
+                    <button> Actualizar </button>
+                    <button> Borrar </button>
+                </div>
+            </form>
+          </section>
+
+</body>
+</html>
