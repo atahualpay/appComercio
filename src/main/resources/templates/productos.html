@@ -41,32 +41,31 @@
     </style>
 	
 	
+	<meta name ="description" content = "Login" />
+ 
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+
+
+
+ <title>Productos</title>
+    
+</head>
+<body>
+
+    <form >
+        Nombre del archivo <input type="text" name="nit" size="20"><br/><br/>
+
+        <input type="submit" value="Examinar"/>
+        <input type="submit" value="Cargar"/>
+		
+    </form>    
 	
 	
-	<div>
-		<table class="table">
-			<thead style="background-color: #5BA5EA">
-				<tr>
-					<th>Cedula</th>
-					<th>Direccion</th>
-					<th>Correo Electronico</th>
-					<th>Nombre Completo</th>
-					<th>Telefono</th>
-					<th>Accion</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="clientes:${clientes}">
-					<td th:text="${clientes.cedula_cliente}"></td>
-					<td th:text="${clientes.direccion_cliente}"></td>
-					<td th:text="${clientes.email_cliente}"></td>
-					<td th:text="${clientes.nombre_cliente}"></td>
-					<td th:text="${clientes.telefono_cliente}"></td>
-					<td><a th:href="@{/editarcliente/}+${clientes.cedula_cliente}">Editar</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	
 </body>
 </html>

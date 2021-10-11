@@ -41,32 +41,19 @@
     </style>
 	
 	
+ <title>Reportes</title>
+    
+</head>
+<body>
+
+    <form >
+        <input type="submit" value="Listado de Usuarios"/><br/><br/>
+        <input type="submit" value="Listado de Clientes"/><br/><br/>
+		<input type="submit" value="Ventas por Cliente"/><br/><br/>
+		
+    </form>    
 	
 	
-	<div>
-		<table class="table">
-			<thead style="background-color: #5BA5EA">
-				<tr>
-					<th>Cedula</th>
-					<th>Direccion</th>
-					<th>Correo Electronico</th>
-					<th>Nombre Completo</th>
-					<th>Telefono</th>
-					<th>Accion</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="clientes:${clientes}">
-					<td th:text="${clientes.cedula_cliente}"></td>
-					<td th:text="${clientes.direccion_cliente}"></td>
-					<td th:text="${clientes.email_cliente}"></td>
-					<td th:text="${clientes.nombre_cliente}"></td>
-					<td th:text="${clientes.telefono_cliente}"></td>
-					<td><a th:href="@{/editarcliente/}+${clientes.cedula_cliente}">Editar</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+
 </body>
 </html>

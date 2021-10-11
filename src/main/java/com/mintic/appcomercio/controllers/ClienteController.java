@@ -41,9 +41,15 @@ public class ClienteController {
 	}
     
     
+    @GetMapping("/productos")
+	public String productos(Model model) {
+		return "productos";
+	}
     
-    
-    
+    @GetMapping("/reportes")
+	public String reportes(Model model) {
+		return "reportes";
+	}
     
     
 
