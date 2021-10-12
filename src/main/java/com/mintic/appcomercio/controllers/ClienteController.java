@@ -30,29 +30,6 @@ public class ClienteController {
 		return "listarClientes";
 	}
     
-    @GetMapping("/proveedores")
-	public String proveedores(Model model) {
-		return "proveedores";
-	}
-    
-    @GetMapping("/ventas")
-	public String ventas(Model model) {
-		return "ventas";
-	}
-    
-    
-    @GetMapping("/productos")
-	public String productos(Model model) {
-		return "productos";
-	}
-    
-    @GetMapping("/reportes")
-	public String reportes(Model model) {
-		return "reportes";
-	}
-    
-    
-
     @PostMapping    //Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {
         return clienteService.guardarCliente(cliente);

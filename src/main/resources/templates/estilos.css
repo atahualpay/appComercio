@@ -14,7 +14,6 @@ h1{
       width :800px;
 }
 #menu #item a {
-    /*color:#1B4F72;*/
 	color:#6E2C00;
     padding: 12px 35px;
     display:block;
@@ -32,7 +31,6 @@ h1{
     clear:both;
 }
 #container{
-    /*width = 1000px;*/
     margin : 0px auto;
     border: 2px solid rgba(242, 243, 244,1);;
 
@@ -41,7 +39,6 @@ h1{
     float:left;
     width:50%;
     min-height:500px;
-    /*background:green;*/
     padding-top : 20px;
     padding-left:20px;
 }
@@ -51,7 +48,7 @@ h1{
     color: black;
     margin-top: 15px;
     margin-bottom: 15px;
-    /*border-bottom: 1px solid #eee;*/
+    border-bottom: 1px solid #eee;
 }
 .field label{
     font-size: 18px;

@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<link rel=stylesheet type="text/css" href="estilos.css"> 
-<title>Proveedores</title>
-</head>
+    <meta charset="utf-8" />
+	<link rel=stylesheet type="text/css" href="estilos.css"> 
+	<title>Proveedores</title>
+	</head>
+	
 <body>
-	<div id="menu">
-		<ul>
-			<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
-			<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
-			<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
-			<li id="item"><a th:href="@{/productos}"> Productos</a></li>
-			<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
-			<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
-		</ul>
-	</div>
-	<div>
+    
+    <header>
+       <h1 align="center" > Tienda Genérica Grupo 2 (Clase 65) </h1>
+    </header>   
+      <nav>
+        <div id="menu">
+            <ul>
+                <li id ="item"><a href="#">Usuarios</a></li>
+                <li id ="item"><a href="#">Clientes</a></li>
+                <li id ="item"><a href="#"> Proveedores</a></li>
+                <li id ="item"><a href="#"> Ventas</a></li>
+                <li id ="item"><a href="#"> Reportes</a></li>    
+            </ul>    
+        </div>
+      </nav>
       <div class = "clearfix"></div>
 
 		<div id = "container">
@@ -24,19 +29,19 @@
             <form>
                 <div class='field'>
                     <label>N.I.T.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='nit' type='name' placeholder='N.I.T' autocomplete />
+                    <input name='nit' type='name' required value="Ingrese Nombre del proveedor" placeholder='nit' autocomplete />
                     <label>Nombre del Proveedor</label>
-                    <input name='provedor' type='name' autocomplete />
+                    <input name='provedor' type='name' required value="Ingrese Nombre Completo" autocomplete />
                 </div>
                 <div class='field'>
                     <label> Dirección&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='direccion' type='name' autocomplete />
+                    <input name='direccion' type='name' required value="Ingrese Dirección Completa" autocomplete />
                     <label>Teléfono&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='telefono' type='value' autocomplete />
+                    <input name='telefono' type='value' required value="Número de teléfono" autocomplete />
                 </div>
                 <div class='field'>
                     <label> Ciudad&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='ciudad' type='name' autocomplete />
+                    <input name='ciudad' type='name' required value="Ciudad de Origen" autocomplete />
                 </div>            
                 <div class='submit'>
                     <button> Consultar </button>
@@ -46,6 +51,9 @@
                 </div>
             </form>
           </section>
+        
 
-</body>
+		</div>    
+    </body>
+
 </html>
