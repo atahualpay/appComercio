@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*Estilo del Menu*/
+
+h1{
+    text-align: center;
+    background: rgba(242, 243, 244, 1); /*Color de fondo*/
+    width: 750px; /*Ancho de cajon*/
+}
+
+#menu ul{ /*Todos los marcadores ul (lista) dentro del id=menu*/
+    list-style: none; /*Borra estilos de lista*/
+    margin: 0; /*Sin margen externa*/
+    padding: 0; /*Sin margen interna*/
+    width: 900px; /*Ancho de cajon*/
+    float: left;    
+}
+
+#menu #item { /*Todos los id=item dentro de los id=menu*/
+    display:inline-block;
+}
+
+#menu #item a:hover { /*Todas las referencias a dentro de los id=item y este dentro de los id=menu, hover resalta*/
+    color: white; /*Color del Texto*/
+    background-color: gray; /*Color del fondo*/
+}
+
+#menu #item a { /*Todas las referencias a dentro de los id=item y este dentro de los id=menu*/
+    color: #1B4F72; /*Color del Texto*/
+    padding: 12px 22px; /*Margen interno*/
+    display: block; /*Aplila las cajas en forma vertical, respetando altura y ancho*/
+    font-size: 16; /*Tamaño de texto*/
+    text-decoration: none; /*Texto sin efectos*/
+}
+
+/*Estilo del Formulario*/
+
+.clearfix { /*Aplica a toda la clase clearfix*/
+    clear: both; /*Mueve el contenerdor debajo de los elementos flotantes que esten a sus lados*/
+}
+
+#container {
+    float: left;
+    width: 750px;
+    margin: 0px auto;
+    border: 1px solid rgba(242, 243, 244, 1);
+}
+
+#content {
+    min-height: 500px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.field {
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.field label {
+    width: 135px;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 150px;
+}
+
+.field input {
+    width: 300px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 0px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.submit {
+    /*Instrucciones para centrar contenido*/
+    display: flex; /*Simula celdas de tabla para logran centrado con la siguiente instruccion*/
+    justify-content: center; /* Centra en cojunto con la anterior instruccion*/
+    width: 750px;
+    margin-top: 1.75rem;
+}
+
+.submit button {
+    cursor: pointer; /*Cambia la forma de cursor al pasar por el area*/
+    padding: 20px;
+    font-size: 14px;
+    border: 2px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: lightgray;
+}
