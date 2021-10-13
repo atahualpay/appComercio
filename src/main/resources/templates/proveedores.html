@@ -1,59 +1,152 @@
-<!DOCTYPE html>
-<html lang="es">
+<HTML>
+
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8" />
-	<link rel=stylesheet type="text/css" href="static/estilos.css"> 
-	<title>Proveedores</title>
-	</head>
-	
+
+<style>
+body {
+
+  background-image: url('https://lh3.googleusercontent.com/proxy/al6qS-bLR3W6dYYUqieZHfmqSvo6d6clYM14lev3EYyF9Mze0vjo0MUAIMYK2A7MwGWv4XfcSCBO7LAPCr8iS5Hx3v9W0wtzGgNhRTntDcLTu2m8brxrtbTdFtlWnzfwRw3jL12YimzjSNICR8W4PsMYZMgy');
+  
+  background-opacity: 0.9;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 80%;
+
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scrollmenu {
+  background-color: #008060;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+div.scrollmenu a:hover {
+  background-color: #787;
+  
+}
+h1 {text-align: center;}
+p {text-align: center;}
+form {text-align: center;}
+</style>
+</head>
 <body>
+
+  </head>
+  
+
+
+<body>
+
+
+<div class="scrollmenu">
+   <h1 style="color:#FFFFFF" >&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743</h1>
+  <a href="#home">Usuarios</a>
+  <a href="#news">Clientes</a>
+  <a href="#contact">Proveedores</a>
+  <a href="#about">Productos</a>
+  <a href="#support">Ventas</a>
+  <a href="#blog">Reportes</a>
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div id="backgroundImage">
+
+
+<br/><br/><br/><br/><br/>
+
+
+
+    <meta charset="utf-8" />
+	
+	
+    <meta name ="description" content = "Login" />
+ 
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+    </style>
+	
+	
+ <title>Reportes</title>
     
-    <header>
-       <h1 align="center" > Tienda Genérica Grupo 2 (Clase 65) </h1>
-    </header>   
-      <nav>
-        <div id="menu">
-            <ul>
-                <li id ="item"><a href="#">Usuarios</a></li>
-                <li id ="item"><a href="#">Clientes</a></li>
-                <li id ="item"><a href="#"> Proveedores</a></li>
-                <li id ="item"><a href="#"> Ventas</a></li>
-                <li id ="item"><a href="#"> Reportes</a></li>    
-            </ul>    
-        </div>
-      </nav>
-      <div class = "clearfix"></div>
+</head>
 
-		<div id = "container">
-          <section id = "content">
-            <form>
-                <div class='field'>
-                    <label>N.I.T.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='nit' type='name' required value="Ingrese Nombre del proveedor" placeholder='nit' autocomplete />
-                    <label>Nombre del Proveedor</label>
-                    <input name='provedor' type='name' required value="Ingrese Nombre Completo" autocomplete />
-                </div>
-                <div class='field'>
-                    <label> Dirección&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='direccion' type='name' required value="Ingrese Dirección Completa" autocomplete />
-                    <label>Teléfono&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='telefono' type='value' required value="Número de teléfono" autocomplete />
-                </div>
-                <div class='field'>
-                    <label> Ciudad&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input name='ciudad' type='name' required value="Ciudad de Origen" autocomplete />
-                </div>            
-                <div class='submit'>
-                    <button> Consultar </button>
-                    <button> Crear </button>
-                    <button> Actualizar </button>
-                    <button> Borrar </button>
-                </div>
-            </form>
-          </section>
-        
 
-		</div>    
-    </body>
+    <form >
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-</html>
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #4CAF50;} /* Blue */
+.button3 {background-color: #008CBA;} /* Blue */
+</style>
+</head>
+<body>
+
+<form>
+	<div class='field'>
+    <label>N.I.T.</label>
+    <input name='nit' type='text'  placeholder='nit'/>
+    <label>Nombre del Proveedor</label>
+    <input name='provedor' type='text' placeholder='Proveedor'/><br/><br/>
+    </div>
+    
+    <div class='field'>
+    <label> Dirección</label>
+    <input name='direccion' type='text' placeholder='Direccion'/>
+    <label>Teléfono</label>
+    <input name='telefono' type='number' placeholder='Teléfono'/><br/><br/>
+    </div>
+    
+    
+    <div class='field'>
+    <label> Ciudad</label>
+    <input name='ciudad' type='text' placeholder='Ciudad de Origen'/><br/><br/>
+    </div>            
+
+<button class="button button1">Consultar</button>
+<button class="button button1">Crear</button>
+<button class="button button1">Actualizar</button>
+<button class="button button2">Borrar</button><br/><br/><br/><br/><br/><br/><br/><br/><br>/<br/><br/><br/>
+		
+    </form>    
+
+  <p>
+    &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
+
+  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
+  </p>
+
+</div>
+
+</body>
+
