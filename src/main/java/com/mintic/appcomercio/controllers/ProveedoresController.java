@@ -16,7 +16,7 @@ import com.mintic.appcomercio.models.ProveedoresModel;
 import com.mintic.appcomercio.services.ProveedoresService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/proveedores")
 public class ProveedoresController {
 	
 	@Autowired
@@ -30,7 +30,7 @@ public class ProveedoresController {
 		
 	}
 	
-	@GetMapping("/new")
+	@GetMapping
 	public String agregar(Model model){
 		
 		model.addAttribute("proveedor", new ProveedoresModel());
