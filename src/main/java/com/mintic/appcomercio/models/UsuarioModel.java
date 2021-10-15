@@ -16,7 +16,7 @@ public class UsuarioModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cedula_usuario;
     private String nombre_usuario;
     private String email_usuario;
