@@ -26,7 +26,7 @@ public class UsuarioController {
         List<UsuarioModel> usuarios = (List<UsuarioModel>) data.findAll();
         Long count = data.count();
         model.addAttribute("usuarios", usuarios);
-        model.addAttribute("cuenta", count);
+
         return "listarUsuarios";
     }
 
