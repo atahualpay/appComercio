@@ -29,7 +29,7 @@ public class ClienteController {
 		model.addAttribute("clientes", clientes);
 		return "listarClientes";
 	}
-
+    
     @PostMapping    //Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {
         return clienteService.guardarCliente(cliente);

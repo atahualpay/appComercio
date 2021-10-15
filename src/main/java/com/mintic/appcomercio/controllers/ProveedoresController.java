@@ -57,5 +57,4 @@ public class ProveedoresController {
 		service.delete(nitproveedor);
 		return "listar_proveedores";
 	}
-
 }

@@ -1,0 +1,80 @@
+@charset "utf-8";
+#menu ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  
+}
+#menu #item{
+    float:left;
+    height:50px;
+}
+h1{
+  background:rgba(242, 243, 244,1);
+      width :800px;
+}
+#menu #item a {
+	color:#6E2C00;
+    padding: 12px 35px;
+    display:block;
+    font-family: Arial bold, Helvetica;
+    font-size:20;
+    text-decoration:none;
+}
+
+#menu #item a:hover {
+  color: white;
+  background-color: #F7DC6F /*gray*/;
+}
+/*Formulario*/
+.clearfix {
+    clear:both;
+}
+#container{
+    margin : 0px auto;
+    border: 2px solid rgba(242, 243, 244,1);;
+
+}
+#content{
+    float:left;
+    width:50%;
+    min-height:500px;
+    padding-top : 20px;
+    padding-left:20px;
+}
+
+
+.field{
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.field label{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.field input{
+    font-size: 16px;
+    margin-left: 10px;
+    height: 30px;
+    padding-left : 5px;
+}
+.submit{
+    justify-content: center;
+    width :800px;
+    margin-top: 1.75rem;
+    margin-left: 120px;
+}
+
+
+
+.submit button{
+    cursor:pointer;
+    padding: 20px;
+    font-size : 14px;
+    border: 2px;
+    margin-left: 2px;
+    border-radius: 5px;
+    background-color: lightgray;
+}

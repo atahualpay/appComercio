@@ -1,32 +1,126 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Proveedores</title>
-	</head>
-	<body>
-		<header>
-			<h1>Datos Proveedores</h1>
-		</header>
-		<form>
-			<label for = "texto"> Nombre</label>
-			<input type = "text" name = nombre_proveedor>
-			<br>
-			<label for = "texto"> Telefono</label>
-			<input type = "text" name = telefono_proveedor>
-			<br>
-			<label for = "texto"> Ciudad</label>
-			<input type = "text" name = ciudad_proveedor>
-			<br>
-			<label for = "texto"> Direccion</label>
-			<input type = "text" name = direccion_proveedor>
-			<br>
-			<label for = "texto"> NIT</label>
-			<input type = "text" name = nit_proveedor>
-			<br>
-			<input type = "submit" name = guardar>
-			
-			
-		</form>
-	</body>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/proxy/al6qS-bLR3W6dYYUqieZHfmqSvo6d6clYM14lev3EYyF9Mze0vjo0MUAIMYK2A7MwGWv4XfcSCBO7LAPCr8iS5Hx3v9W0wtzGgNhRTntDcLTu2m8brxrtbTdFtlWnzfwRw3jL12YimzjSNICR8W4PsMYZMgy');
+            background-opacity: 0.9;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 80%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.scrollmenu {
+            background-color: #008060;
+            overflow: auto;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        div.scrollmenu a:hover {
+            background-color: #787;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .button {
+            border: 2px solid white;
+            border-radius: 12px;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        .button1 {
+            background-color: #4CAF50;
+        }
+
+        /* Green */
+        .button2 {
+            background-color: #4CAF50;
+        }
+
+        /* Blue */
+        .button3 {
+            background-color: #008CBA;
+        }
+
+        /* Blue */
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="Login" />
+    <title>Proveedores</title>
+</head>
+<body>
+    <div class="scrollmenu">
+        <h1 style="color:#FFFFFF">&#9743 Tienda Genérica Grupo 2 (Clase 65) &#9743</h1>
+        <a href="#home">Usuarios</a>
+        <a href="#news">Clientes</a>
+        <a href="#contact">Proveedores</a>
+        <a href="#about">Productos</a>
+        <a href="#support">Ventas</a>
+        <a href="#blog">Reportes</a>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div id="backgroundImage">
+        <br /><br /><br /><br /><br />
+        <form>
+            <label for="nit_proveedor"> NIT</label>
+            <input type="text" name="nit_proveedor" placeholder="nit">
+            <br>
+            <label for="nombre_proveedor"> Nombre</label>
+            <input type="text" name="nombre_proveedor" placeholder="Proveedor">
+            <br>
+            <label for="direccion_proveedor"> Direccion</label>
+            <input type="text" name="direccion_proveedor" placeholder="Direccion">
+            <br>
+            <label for="telefono_proveedor"> Telefono</label>
+            <input type="text" name="telefono_proveedor" placeholder="Teléfono">
+            <br>
+            <label for="ciudad_proveedor"> Ciudad</label>
+            <input type="text" name="ciudad_proveedor" placeholder="Ciudad de Origen">
+            <br>
+            <!--<input type = "submit" name = guardar>-->
+            <button class="button button1">Consultar</button>
+            <button class="button button1">Crear</button>
+            <button class="button button1">Actualizar</button>
+            <button
+                class="button button2">Borrar</button><br /><br /><br /><br /><br /><br /><br /><br /><br><br /><br /><br />
+        </form>
+        <p>
+            &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2
+            <a class="navbar-brand" href="#"> <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png"
+                    width="40" height="40" class="d-inline-block align-top" alt="">
+        </p>
+    </div>
+</body>
 </html>
