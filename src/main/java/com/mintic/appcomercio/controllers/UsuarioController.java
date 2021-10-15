@@ -24,20 +24,21 @@ public class UsuarioController {
 
     @GetMapping("/listarusuarios")
 
-	  public String listarusuarios(Model model) {
-		  List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios();
-      Long count = data.count();
-		  model.addAttribute("usuarios", usuarios);
-      model.addAttribute("cuenta", count);
-		  return "listarUsuarios";
-	  }
-    
+    public String listarusuarios(Model model) {
+        List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios();
+        Long count = usuarioService.contarUsuarios();
+        model.addAttribute("usuarios", usuarios);
+        model.addAttribute("cuenta", count);
+        return "listarUsuarios";
+    }
+
     @GetMapping
     public String usuarios(Model model) {
-      model.addAttribute("usuario", new UsuarioModel());
-    return "usuarios";  
-  
-    @PostMapping    //Update de datos
+        model.addAttribute("usuario", new UsuarioModel());
+        return "usuarios";
+    }
+
+    @PostMapping // Update de datos
     public UsuarioModel crearModificarUsuario(@RequestBody UsuarioModel usuario) {
         return usuarioService.guardarUsuario(usuario);
     }
@@ -51,7 +52,9 @@ public class UsuarioController {
     public String eliminarUsuarioPorCedula(@PathVariable("cedula_usuario") Long cedula_usuario) {
         boolean eliminado = usuarioService.eliminarUsuario(cedula_usuario);
 
-        if(eliminado) return "Cliente Eliminado";
-        else return "Error Eliminando Cliente";
+        if (eliminado)
+            return "Cliente Eliminado";
+        else
+            return "Error Eliminando Cliente";
     }
 }
