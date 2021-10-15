@@ -24,7 +24,9 @@ public class UsuarioController {
     @GetMapping("/listarusuarios")
     public String listarusuarios(Model model) {
         List<UsuarioModel> usuarios = (List<UsuarioModel>) data.findAll();
+        Long count = data.count();
         model.addAttribute("usuarios", usuarios);
+        model.addAttribute("cuenta", count);
         return "listarUsuarios";
     }
 
