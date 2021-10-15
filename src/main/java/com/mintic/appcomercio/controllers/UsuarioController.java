@@ -53,8 +53,8 @@ public class UsuarioController {
         boolean eliminado = usuarioService.eliminarUsuario(cedula_usuario);
 
         if (eliminado)
-            return "Cliente Eliminado";
+            return "Usuario Eliminado";
         else
-            return "Error Eliminando Cliente";
+            return "Error Eliminando Usuario";
     }
 }
