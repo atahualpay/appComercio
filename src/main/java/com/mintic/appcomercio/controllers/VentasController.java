@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller // Declara la clase como controlador
 /*@RequestMapping("/clientes") // Define la direccion del controlador*/
-public class ReportesController {
+public class VentasController {
 
     @Autowired
-    ClienteService ReportesService;
+    ClienteService ventasService;
 
   
     
-    @GetMapping("/reportes")
-	public String reportes(Model model) {
-		return "reportes";
+    @GetMapping("/ventas")
+	public String ventas(Model model) {
+		return "ventas";
 	}
     
     

@@ -12,7 +12,6 @@ import lombok.Data;
 @Data
 @Table(name = "usuarios")
 public class UsuarioModel {
-
     @Id // Define la primera variable declarada como identificador
     @Column(unique = true, nullable = false) // Establece propiedades de la columna en la tabla
     public Long cedula_usuario;

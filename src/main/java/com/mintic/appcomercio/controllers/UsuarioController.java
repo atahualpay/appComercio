@@ -23,12 +23,20 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @GetMapping("/listarusuarios")
-	public String listarusuarios(Model model) {
-		List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios();
-		model.addAttribute("usuarios", usuarios);
-		return "listarUsuarios";
-	}
+
+	  public String listarusuarios(Model model) {
+		  List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios();
+      Long count = data.count();
+		  model.addAttribute("usuarios", usuarios);
+      model.addAttribute("cuenta", count);
+		  return "listarUsuarios";
+	  }
     
+    @GetMapping
+    public String usuarios(Model model) {
+      model.addAttribute("usuario", new UsuarioModel());
+    return "usuarios";  
+  
     @PostMapping    //Update de datos
     public UsuarioModel crearModificarUsuario(@RequestBody UsuarioModel usuario) {
         return usuarioService.guardarUsuario(usuario);
