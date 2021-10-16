@@ -28,7 +28,7 @@ public class UsuarioController {
         List<UsuarioModel> usuarios = usuarioService.obtenerUsuarios();
         Long count = usuarioService.contarUsuarios();
         model.addAttribute("usuarios", usuarios);
-        model.addAttribute("cuenta", count);
+
         return "listarUsuarios";
     }
 
