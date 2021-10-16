@@ -1,9 +1,8 @@
 package com.mintic.appcomercio.models;
 
-import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +11,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "usuarios")
+<<<<<<< HEAD
 public class UsuarioModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -48,3 +48,14 @@ public class UsuarioModel implements Serializable {
 	}
 
 }
+=======
+public class UsuarioModel {
+    @Id // Define la primera variable declarada como identificador
+    @Column(unique = true, nullable = false) // Establece propiedades de la columna en la tabla
+    public Long cedula_usuario;
+    public String email_usuario;
+    public String nombre_usuario;
+    public String password;
+    public String usuario;
+}
+>>>>>>> ramaVisuales
