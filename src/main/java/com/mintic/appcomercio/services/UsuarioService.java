@@ -36,8 +36,9 @@ public class UsuarioService {
         try {
             usuarioRepository.deleteById(cedula_usuario);
             return true;
-     
 
+        } catch (Exception e) {
+            return false;
         }
     }
 
