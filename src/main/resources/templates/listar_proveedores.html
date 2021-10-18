@@ -72,13 +72,19 @@
 				</div>
 			</nav>
 			<div class="container mt-4">
-				<h1>Listado de Proveedores</h1>
-				<a th:href="@{/proveedores/new}" class="btn btn-primary mb1 black bg-silver">Agregar Nuevo</a>
-				<a th:href="@{/proveedores/listar}" class="btn btn-primary">Listar</a>
+				<div class="d-flex align-items-center justify-content-between">
+					<h1>Listado de Proveedores</h1>
+					<a th:href="@{/proveedores}" class="btn btn-primary"
+						>Agregar Nuevo Proveedor</a
+					>
+				</div>
+				<!-- <a th:href="@{/proveedores/new}" class="btn btn-primary mb1 black bg-silver">Agregar Nuevo</a> -->
 				<table class="table table-striped table-hover">
 					<caption>
 						<p>
-							<b>Lista Total de Proveedores: <span th:text="${cuenta}"></span></b>
+							<b
+								>Lista Total de Proveedores: <span th:text="${cuenta}"></span
+							></b>
 						</p>
 					</caption>
 					<thead class="table table-success">
@@ -93,16 +99,24 @@
 					</thead>
 					<tbody>
 						<tr th:each="proveedor:${proveedores}">
-					<td th:text="${proveedor.nitproveedor}"></td>
-					<td th:text="${proveedor.nombre_proveedor}"></td>
-					<td th:text="${proveedor.telefono_proveedor}"></td>
-					<td th:text="${proveedor.ciudad_proveedor}"></td>
-					<td th:text="${proveedor.direccion_proveedor}"></td>					
-					<td>
-					<a th:href="@{/proveedores/editar/}+${proveedor.nitproveedor}" class = "btn btn-warning" >Editar</a>
-					<a th:href="@{/proveedores/eliminar/}+${proveedor.nitproveedor}"class = "btn btn-danger">Eliminar</a>
-				    </td>
-				</tr>
+							<td th:text="${proveedor.nitproveedor}"></td>
+							<td th:text="${proveedor.nombre_proveedor}"></td>
+							<td th:text="${proveedor.telefono_proveedor}"></td>
+							<td th:text="${proveedor.ciudad_proveedor}"></td>
+							<td th:text="${proveedor.direccion_proveedor}"></td>
+							<td>
+								<a
+									th:href="@{/proveedores/editar/}+${proveedor.nitproveedor}"
+									class="btn btn-warning"
+									>Editar</a
+								>
+								<a
+									th:href="@{/proveedores/eliminar/}+${proveedor.nitproveedor}"
+									class="btn btn-danger"
+									>Eliminar</a
+								>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>

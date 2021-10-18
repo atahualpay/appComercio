@@ -93,42 +93,42 @@
     
     <div id="backgroundImage">
         <br /><br /><br />
-        <form th:action="@{/proveedores/save}" th:object="${proveedor}" method="POST">
+        <form th:action="@{/usuarios/guardar}" th:object="${usuario}" method="POST">
 		     <div class ="card-header">
-		     	<h2>NUEVO PROVEEDOR</h2>
+		     	<h2>NUEVO USUARIO</h2>
 		     </div>
 	      <div class ="card-body">
 	       <div class="form-group">
 	       		<div>
-					<label>NIT:                  </label> 
-			<input th:field="*{nitproveedor}"  type="number" class="form-control" />
+					<label>Cedula</label> 
+					<input th:field="*{cedula_usuario}"  type="number" class="form-control" th:required="required" th:readonly="${bloqueado != null AND bloqueado == 'true'}">
 				</div>
 				<br />
 				<div>
-					<label>Nombre</label> 
-					<input th:field="*{nombre_proveedor}" type="text" class="form-control" />
+					<label>Nombre Completo</label> 
+					<input th:field="*{nombre_usuario}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 				<div>
-					<label>Telefono</label> 
-					<input th:field="*{telefono_proveedor}" type="text" class="form-control" />
+					<label>Correo Electronico</label> 
+					<input th:field="*{email_usuario}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 				<div>
-					<label>Direccion</label> 
-					<input th:field="*{direccion_proveedor}" type="text" class="form-control" />
+					<label>Usuario</label> 
+					<input th:field="*{usuario}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 				<div>
-					<label>Ciudad</label> 
-					<input th:field="*{ciudad_proveedor}" type="text" class="form-control" />
+					<label>Password</label> 
+					<input th:field="*{password}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 			</div>
 						
 			<div class ="card-footer"> 
 				<input type="submit" value="Guardar" class="button button1" />
-				<a th:href="@{/proveedores/listar}" class="button button3">Listar Proveedores</a> 
+				<a th:href="@{/usuarios/listar}" class="button button3">Listar Usuarios</a> 
 			</div>
 			</div>
 		</form>
