@@ -2,11 +2,8 @@ package com.mintic.appcomercio.services;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
 
 import com.mintic.appcomercio.models.ProductosModel;
 import com.mintic.appcomercio.repositories.ProductosRepository;
@@ -14,8 +11,6 @@ import com.mintic.appcomercio.repositories.ProductosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
 
 @Service
 public class ProductosService {
@@ -53,8 +48,8 @@ public class ProductosService {
                 pr.setPrecio_venta(Double.parseDouble(data[4]));
                 pr.setNitproveedor(Long.parseLong(data[5]));
                 IProduct.save(pr);
-
             }
+            br.close();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

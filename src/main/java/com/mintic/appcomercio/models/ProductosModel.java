@@ -4,20 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 @Entity
 @Table(name = "productos")
 public class ProductosModel {
-    @Id
-    private long codigo_producto;
-    private int ivacompra;
-    private long nitproveedor;
-    private String nombre_producto;
-    private double precio_compra;
-    private double precio_venta;
-	
-    public long getCodigo_producto() {
+	@Id
+	private long codigo_producto;
+	private int ivacompra;
+	private long nitproveedor;
+	private String nombre_producto;
+	private double precio_compra;
+	private double precio_venta;
+
+	public long getCodigo_producto() {
 		return codigo_producto;
 	}
 
@@ -71,10 +69,5 @@ public class ProductosModel {
 				+ nitproveedor + ", nombre_producto=" + nombre_producto + ", precio_compra=" + precio_compra
 				+ ", precio_venta=" + precio_venta + "]";
 	}
-    
-    
-    
-    
-    
-    
+
 }
