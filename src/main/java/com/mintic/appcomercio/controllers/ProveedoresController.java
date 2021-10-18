@@ -30,7 +30,7 @@ public class ProveedoresController {
 		
 	}
 	
-	@GetMapping
+	@GetMapping("/new")
 	public String agregar(Model model){
 		
 		model.addAttribute("proveedor", new ProveedoresModel());
@@ -41,7 +41,7 @@ public class ProveedoresController {
 	public String save(@Validated ProveedoresModel p, Model model){
 		
 		service.save(p);
-		return "redirect:/listar";
+		return "listar_proveedores";
 	}
 	@GetMapping("/editar/{nitproveedor}")
 	public String editar(@PathVariable int nitproveedor, Model model){
