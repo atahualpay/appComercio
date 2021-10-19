@@ -23,14 +23,14 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
-    @GetMapping("/listarclientes")
-	public String listarclientes(Model model) {
-		List<ClienteModel> clientes = clienteService.obtenerClientes();
-		model.addAttribute("clientes", clientes);
-		return "listarClientes";
-	}
-    
-    @PostMapping    //Update de datos
+    @GetMapping("/listar")
+    public String listarclientes(Model model) {
+        List<ClienteModel> clientes = clienteService.obtenerClientes();
+        model.addAttribute("clientes", clientes);
+        return "listarClientes";
+    }
+
+    @PostMapping // Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {
         return clienteService.guardarCliente(cliente);
     }
@@ -44,7 +44,9 @@ public class ClienteController {
     public String eliminarClientePorCedula(@PathVariable("cedula_ciente") Long cedula_ciente) {
         boolean eliminado = clienteService.eliminarCliente(cedula_ciente);
 
-        if(eliminado) return "Cliente Eliminado";
-        else return "Error Eliminando Cliente";
+        if (eliminado)
+            return "Cliente Eliminado";
+        else
+            return "Error Eliminando Cliente";
     }
 }
