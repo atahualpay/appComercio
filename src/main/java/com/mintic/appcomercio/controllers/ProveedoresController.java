@@ -18,42 +18,43 @@ import com.mintic.appcomercio.services.ProveedoresService;
 @Controller
 @RequestMapping("/proveedores")
 public class ProveedoresController {
-	
+
 	@Autowired
 	public ProveedoresService service;
-	
+
 	@GetMapping("/listar")
 	public String listar(Model model) {
-		List<ProveedoresModel>proveedores=service.listar();
+		List<ProveedoresModel> proveedores = service.listar();
 		model.addAttribute("proveedores", proveedores);
 		return "listar_proveedores";
-		
+
 	}
-	
+
 	@GetMapping
-	public String agregar(Model model){
-		
+	public String agregar(Model model) {
+
 		model.addAttribute("proveedor", new ProveedoresModel());
 		return "form";
 	}
-	
+
 	@PostMapping("/save")
-	public String save(@Validated ProveedoresModel p, Model model){
-		
+	public String save(@Validated ProveedoresModel p, Model model) {
+
 		service.save(p);
-		return "redirect:/listar";
+		return "listar_proveedores";
 	}
+
 	@GetMapping("/editar/{nitproveedor}")
-	public String editar(@PathVariable int nitproveedor, Model model){
-		
-		Optional<ProveedoresModel>proveedor=service.listarId(nitproveedor);
+	public String editar(@PathVariable int nitproveedor, Model model) {
+
+		Optional<ProveedoresModel> proveedor = service.listarId(nitproveedor);
 		model.addAttribute("proveedor", proveedor);
-		return "form";		
+		return "form";
 	}
-	
+
 	@GetMapping("/eliminar/{nitproveedor}")
 	public String delete(@PathVariable int nitproveedor, Model model) {
-		
+
 		service.delete(nitproveedor);
 		return "listar_proveedores";
 	}
