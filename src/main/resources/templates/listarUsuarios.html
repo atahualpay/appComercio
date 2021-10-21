@@ -11,7 +11,19 @@
 		<title>Listado de Usuarios</title>
 	</head>
 	<body>
-		<div class="container-fluid bg-success text-light bg-opacity-50 vh-100">
+	
+<style> /*Código de imagen de fondo*/
+body {
+  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 80%;
+}
+</style>
+	
+	
+	
+		<div class="container-fluid bg-success text-light bg-opacity-25 vh-100">
 			<!-- <div id="menu">
 				<ul>
 					<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
@@ -22,7 +34,8 @@
 					<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
 				</ul>
 			</div> -->
-			<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			  
 				<div class="container-fluid">
 					<a class="navbar-brand" href="#">
 						<img
@@ -33,6 +46,17 @@
 							alt=""
 						/>
 					</a>
+					
+					
+					
+					
+					<h3 class="text-center"> 
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;							
+					&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743
+					</h3>
+
+
+					
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -50,30 +74,33 @@
 					>
 						<ul class="navbar-nav mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/usuarios}">Usuarios</a>
+								<a class="nav-link" th:href="@{/usuarios}"><strong>Usuarios</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/clientes}">Clientes</a>
+								<a class="nav-link" th:href="@{/clientes}"><strong>Clientes</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/proveedores}">Proveedores</a>
+								<a class="nav-link" th:href="@{/proveedores}"><strong>Proveedores</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/productos}">Productos</a>
+								<a class="nav-link" th:href="@{/productos}"><strong>Productos</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/ventas}">Ventas</a>
+								<a class="nav-link" th:href="@{/ventas}"><strong>Ventas</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/reportes}">Reportes</a>
+								<a class="nav-link" th:href="@{/reportes}"><strong>Reportes</strong></a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
+			
+		
+			
 			<div class="container mt-4">
 				<div class="d-flex align-items-center justify-content-between">
-					<h1>Listado de Usuarios</h1>
+					<h2 style="color:black;">Listado de Usuarios</h2>
 					<a th:href="@{/usuarios}" class="btn btn-primary"
 						>Agregar Nuevo Usuario</a
 					>
@@ -132,6 +159,17 @@
 				integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 				crossorigin="anonymous"
 			></script>
+			
+			
+
+		
+			  <div class="text-center" style="color:black;">
+			  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			  &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
+			  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
+			  </div>
+			
+			
 		</div>
 	</body>
 </html>
