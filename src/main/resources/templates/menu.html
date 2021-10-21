@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<meta charset="utf-8" />
 <head>
     <style>
         body {
-
-            background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
+            background-image: url('https://lh3.googleusercontent.com/proxy/al6qS-bLR3W6dYYUqieZHfmqSvo6d6clYM14lev3EYyF9Mze0vjo0MUAIMYK2A7MwGWv4XfcSCBO7LAPCr8iS5Hx3v9W0wtzGgNhRTntDcLTu2m8brxrtbTdFtlWnzfwRw3jL12YimzjSNICR8W4PsMYZMgy');
             background-opacity: 0.9;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,7 +12,7 @@
         }
 
         div.scrollmenu {
-            background-color: #000080;
+            background-color: #008060;
             overflow: auto;
             white-space: nowrap;
             text-align: center;
@@ -95,45 +93,11 @@
     
     <div id="backgroundImage">
         <br /><br /><br />
-        <form th:action="@{/proveedores/save}" th:object="${proveedor}" method="POST">
-		     <div class ="card-header">
-		     	<h2>NUEVO PROVEEDOR</h2>
-		     </div>
-	      <div class ="card-body">
-	       <div class="form-group">
-	       		<div>
-					<label>NIT:                  </label> 
-			<input th:field="*{nitproveedor}"  type="number" class="form-control" />
-				</div>
-				<br />
-				<div>
-					<label>Nombre</label> 
-					<input th:field="*{nombre_proveedor}" type="text" class="form-control" />
-				</div>
-				<br />
-				<div>
-					<label>Telefono</label> 
-					<input th:field="*{telefono_proveedor}" type="text" class="form-control" />
-				</div>
-				<br />
-				<div>
-					<label>Direccion</label> 
-					<input th:field="*{direccion_proveedor}" type="text" class="form-control" />
-				</div>
-				<br />
-				<div>
-					<label>Ciudad</label> 
-					<input th:field="*{ciudad_proveedor}" type="text" class="form-control" />
-				</div>
-				<br />
+        <div class ="card-body">
+	       
+			<h1>Bienvenidos al Menu Principal</h1>			
+			
 			</div>
-						
-			<div class ="card-footer"> 
-				<input type="submit" value="Guardar" class="button button1" />
-				<a th:href="@{/proveedores/listar}" class="button button3">Listar Proveedores</a> 
-			</div>
-			</div>
-		</form>
 		<br /><br /><br /><br />
         <p>
             &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2

@@ -1,146 +1,87 @@
-<HTML>
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-<meta charset="utf-8" />
-<head>
-<title>Listado de Usuarios</title>
-<style>
-body {
-
-  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 80%;
-
-}
-
-table, th, td {
-  border: 2px solid #0000CD;
-  border-collapse: collapse;
-  margin-left: 700; 
-  margin-right: 0;
-}
-th, td {
-  background-color: #FFFFFF;
-
-    margin-left: auto; 
- 	 margin-right: auto;
-}
-
-
-
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-div.scrollmenu {
-  background-color: #000080;
-  overflow: auto;
-  white-space: nowrap;
-  text-align: center;
-}
-
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  text-align: center;
-}
-
-div.scrollmenu a:hover {
-  background-color: #787;
-  
-}
-h1 {text-align: 70;}
-p {text-align: center;}
-form {text-align: center;}
-</style>
-</head>
-<body>
-
-  </head>
-  
-
-
-<body>
-
-
-<div class="scrollmenu">
-   <h1 style="color:#FFFFFF" >&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743</h1>
-  <a href="#home">Usuarios</a>
-  <a href="#news">Clientes</a>
-  <a href="#contact">Proveedores</a>
-  <a href="#about">Productos</a>
-  <a href="#support">Ventas</a>
-  <a href="#blog">Reportes</a>
-
-</div>
-<br/><br/>
-
-<div id="backgroundImage">
-
-
-<br/><br/><br/><br/><br/>
-
-
-
-    <meta charset="utf-8" />
-	
-	
-    <meta name ="description" content = "Login" />
- 
-    <style type="text/css">
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-
-    </style>
-	
-	
- <title>Reportes</title>
-    
-</head>
-
-
-    <form >
-<style>
-.button {
-  border: 2px solid white;
-  border-radius:12px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-
-.button1 {background-color: #0000CD;} 
-.button2 {background-color: #4CAF50;} 
-.button3 {background-color: #008CBA;} 
-
-
-
-
-</style>
-		
+	<head>
+		<meta charset="utf-8" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>Listado de Usuarios</title>
 	</head>
 	<body>
-
-
+		<div class="container-fluid bg-success text-light bg-opacity-50 vh-100">
+			<!-- <div id="menu">
+				<ul>
+					<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
+					<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
+					<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
+					<li id="item"><a th:href="@{/productos}"> Productos</a></li>
+					<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
+					<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
+				</ul>
+			</div> -->
+			<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">
+						<img
+							src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png"
+							width="40"
+							height="40"
+							class="d-inline-block align-top"
+							alt=""
+						/>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse navbar-collapse d-flex flex-row-reverse"
+						id="navbarSupportedContent"
+					>
+						<ul class="navbar-nav mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/usuarios}">Usuarios</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/clientes}">Clientes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/proveedores}">Proveedores</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/productos}">Productos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/ventas}">Ventas</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" th:href="@{/reportes}">Reportes</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 			<div class="container mt-4">
-				<h1>Listado de Usuarios</h1>
+				<div class="d-flex align-items-center justify-content-between">
+					<h1>Listado de Usuarios</h1>
+					<a th:href="@{/usuarios}" class="btn btn-primary"
+						>Agregar Nuevo Usuario</a
+					>
+				</div>
 				<table class="table table-striped table-hover">
 					<caption>
 						<p>
-
+							<b>Lista Total de Usuarios: <span th:text="${cuenta}"></span></b>
 						</p>
 					</caption>
 					<thead class="table table-success">
@@ -153,39 +94,44 @@ form {text-align: center;}
 							<th>Accion</th>
 						</tr>
 					</thead>
-					
-					
 					<tbody>
-							<tr th:each="usuariores:${usuarios}">
-							<td th:text="${usuariores.cedula_usuario}"></td>
-							<td th:text="${usuariores.nombre_usuario}"></td>
-							<td th:text="${usuariores.email_usuario}"></td>
-							<td th:text="${usuariores.usuario}"></td>
-							<td th:text="${usuariores.password}"></td>
+						<tr th:each="usuario:${usuarios}">
+							<td th:text="${usuario.cedula_usuario}"></td>
+							<td th:text="${usuario.nombre_usuario}"></td>
+							<td th:text="${usuario.email_usuario}"></td>
+							<td th:text="${usuario.usuario}"></td>
+							<td th:text="${usuario.password}"></td>
 							<td>
-								<a th:href="@{/editarusuario/}+${usuariores.cedula_usuario}"
+								<a
+									th:href="@{/usuarios/actualizar/}+${usuario.cedula_usuario}"
+									class="btn btn-warning"
 									>Editar</a
+								>
+								<a
+									th:href="@{/usuarios/eliminar/}+${usuario.cedula_usuario}"
+									class="btn btn-danger"
+									>Eliminar</a
 								>
 							</td>
 						</tr>
-						
-
-
-				</table>
-						
 					</tbody>
-				
-				
-				
+				</table>
+				<div
+					th:class="alert"
+					th:classAppend="${clase}"
+					th:text="${mensaje}"
+				></div>
 			</div>
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			
-  <p>
-    &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
-
-  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
-  </p>
+			<script
+				src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+				integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+				crossorigin="anonymous"
+			></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+				integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+				crossorigin="anonymous"
+			></script>
 		</div>
 	</body>
 </html>

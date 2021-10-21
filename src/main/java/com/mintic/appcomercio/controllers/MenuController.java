@@ -17,19 +17,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller // Declara la clase como controlador
-/*@RequestMapping("/clientes") // Define la direccion del controlador*/
+/* @RequestMapping("/clientes") // Define la direccion del controlador */
 public class MenuController {
 
     @Autowired
     ClienteService menuService;
 
-  
-    
-    @GetMapping("/menu")
-	public String reportes(Model model) {
-		return "menu";
-	}
-    
-    
-  
+    @GetMapping("/")
+    public String reportes(Model model) {
+        return "menu";
+    }
+
 }

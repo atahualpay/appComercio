@@ -58,12 +58,12 @@ form {text-align: center;}
 
 <div class="scrollmenu">
    <h1 style="color:#FFFFFF" >&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743</h1>
-  <a href="#home">Usuarios</a>
-  <a href="#news">Clientes</a>
-  <a href="#contact">Proveedores</a>
-  <a href="#about">Productos</a>
-  <a href="#support">Ventas</a>
-  <a href="#blog">Reportes</a>
+   <a th:href="@{/usuarios}">Usuarios</a>
+   <a th:href="@{/clientes}">Clientes</a>
+   <a th:href="@{/proveedores}">Proveedores</a>
+   <a th:href="@{/productos}">Productos</a>
+   <a th:href="@{/ventas}">Ventas</a>
+   <a th:href="@{/reportes}">Reportes</a>
 
 </div>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -121,12 +121,10 @@ form {text-align: center;}
 <body>
 
 
-    <form> 
-<button class="button button1">Listado de Usuarios</button>
-<button class="button button1">Listado de Clientes</button>
-<button class="button button1">Ventas por Cliente</button>
-	</form>   
-	 
+<a th:href="@{/usuarios/listar}" class="button button1">Listado de Usuarios</a>
+<a th:href="@{/clientes/listar}" class="button button2">Listado de Clientes</a>
+<a class="button button2">Ventas por Cliente</a><br/><br/><br/><br/><br/><br/><br/><br/><br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			 
 <br/><br/><br/><br/><br/><br/><br/><br/><br><br/><br/><br/><br/>
   <p>
     &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
