@@ -1,34 +1,93 @@
+<HTML>
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
+<meta charset="utf-8" />
 <head>
-<meta charset="utf-8">
-<link href="static/estilos.css" type="text/css" rel=stylesheet />
 <title>Listado de Clientes</title>
+<style>
+body {
+
+  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 80%;
+
+}
+
+table, th, td {
+  border: 2px solid #0000CD;
+  border-collapse: collapse;
+  margin-left: 500; 
+  margin-right: 0;
+}
+th, td {
+  background-color: #FFFFFF;
+
+    margin-left: auto; 
+ 	 margin-right: auto;
+}
+
+
+
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scrollmenu {
+  background-color: #000080;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+div.scrollmenu a:hover {
+  background-color: #787;
+  
+}
+h1 {text-align: 70;}
+p {text-align: center;}
+form {text-align: center;}
+</style>
 </head>
 <body>
 
-    <header>
-       <h1> Tienda Genérica Grupo 2 (Clase 65)</h1>
-    </header>  
+  </head>
+  
 
-	<div id="menu">
-		<ul>
-			<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
-			<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
-			<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
-			<li id="item"><a th:href="@{/productos}"> Productos</a></li>
-			<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
-			<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
-		</ul>
-	</div>
-	</nav>
-	    <meta charset="utf-8" />
+
+<body>
+
+
+<div class="scrollmenu">
+   <h1 style="color:#FFFFFF" >&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743</h1>
+  <a href="#home">Usuarios</a>
+  <a href="#news">Clientes</a>
+  <a href="#contact">Proveedores</a>
+  <a href="#about">Productos</a>
+  <a href="#support">Ventas</a>
+  <a href="#blog">Reportes</a>
+
+</div>
+<br/><br/>
+
+<div id="backgroundImage">
+
+
+<br/><br/><br/>
+
+
+
+    <meta charset="utf-8" />
 	
-	    <style>
-        * {
-            color: black;
-        }
-    </style>
 	
     <meta name ="description" content = "Login" />
  
@@ -41,12 +100,54 @@
     </style>
 	
 	
+ <title>Reportes</title>
+    
+</head>
+
+
+    <form >
+<style>
+.button {
+  border: 2px solid white;
+  border-radius:12px;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button1 {background-color: #0000CD;} 
+.button2 {background-color: #4CAF50;} 
+.button3 {background-color: #008CBA;} 
+
+
+
+
+</style>
+		
+
+	<body>
+	
+				<div class="container mt-3">
+				<h1>Listado de Usuarios</h1>
+				</div>
+
+				
 	
 	
-	<div>
+
+		<div>
 		<table class="table">
 			<thead style="background-color: #5BA5EA">
+			   
 				<tr>
+				
 					<th>Cedula</th>
 					<th>Direccion</th>
 					<th>Correo Electronico</th>
@@ -68,5 +169,13 @@
 			</tbody>
 		</table>
 	</div>
-</body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+  <p>
+    &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
+
+  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
+  </p>
+		</div>
+	</body>
 </html>

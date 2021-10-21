@@ -20,5 +20,3 @@ public class UsuarioModel {
     public String password;
     public String usuario;
 }
-    
-    
