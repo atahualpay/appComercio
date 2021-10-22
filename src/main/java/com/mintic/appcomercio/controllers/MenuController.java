@@ -23,7 +23,7 @@ public class MenuController {
     @Autowired
     ClienteService menuService;
 
-    @GetMapping("/")
+    @GetMapping("/menu")
     public String reportes(Model model) {
         return "menu";
     }
