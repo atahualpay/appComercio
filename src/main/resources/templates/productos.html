@@ -9,25 +9,20 @@
 			crossorigin="anonymous"
 		/>
 		<title>Reporte Productos</title>
+		<style> /*Código de imagen de fondo*/
+		body {
+		  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed; 
+		  background-size: 100% 80%;
+		}
+		</style>
 	</head>
 	<body>
-	
-<style> /*Código de imagen de fondo*/
-body {
-  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 80%;
-}
-</style>
-	
-	
-	
-
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			  
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/">
 						<img
 							src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png"
 							width="40"
@@ -36,17 +31,10 @@ body {
 							alt=""
 						/>
 					</a>
-					
-					
-					
-					
 					<h3 class="text-center"  style="color:white;"> 
 					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;							
 					&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743
 					</h3>
-
-
-					
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -86,7 +74,7 @@ body {
 				</div>
 			</nav>
 			
-		<br /><br />
+			<div class="container mt-5">
 			
     			<form class="text-center" th:action="@{/productos/upload}" method="POST" enctype="multipart/form-data">
       				<div class ="card-header">
@@ -94,26 +82,26 @@ body {
 		     </div>
 		     <br /><br /><br />
 		     <div class ="card-body">
-	       <div class="form-group">
-      				
+	       		<div class="form-group">
       				<label for="file" style="color:black;"><b>Seleccione el archivo</b></label>
       				<input type="file" style="color:black;"name="file" id="file" accept=".csv" size="20"> <br /><br />    				
-      				
-      				   				
-      				<button type="submit" class="btn btn-danger">Cargar</button>
-      				
-      				
-      				<div th:class="alert" th:classAppend="${clase}" th:text="${mensaje}"/>
-<!--       				<br /><br /><br /> -->
+					  <!--       				<br /><br /><br /> -->
       				<!-- <button class="button button2">Cargar</button><br/><br/><br/><br/><br/> -->
-      				<br /><br /><br />
-      				</div>
-      				</div>
-    			</form>
-    			
-    			
-
-			<script
+				</div>
+			</div>
+			<div class="card-footer d-flex justify-content-evenly">
+				<button type="submit" class="btn btn-warning btn-lg">Cargar Productos</button>
+			</div>
+			<div th:class="alert" th:classAppend="${clase}" th:text="${mensaje}"/>
+   			</form>
+			</div>
+			  <div class="text-center" style="color:black;">
+			  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br /><br /><br /><br /><br /><br />
+			  &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
+			  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
+			  </div>
+		</div>
+		<script
 				src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 				integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 				crossorigin="anonymous"
@@ -123,17 +111,5 @@ body {
 				integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 				crossorigin="anonymous"
 			></script>
-			
-			
-
-		
-			  <div class="text-center" style="color:black;">
-			  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br /><br /><br />
-			  &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
-			  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
-			  </div>
-			
-			
-		</div>
 	</body>
 </html>

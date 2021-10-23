@@ -28,7 +28,7 @@ body {
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			  
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/">
 						<img
 							src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png"
 							width="40"
@@ -89,9 +89,13 @@ body {
 			
 		<br /><br /><br />
 			
-	<div>
-			<h2  align="center" style="color:black;">Listado de Usuarios</h2>
-	
+		<div class="container mt-4">
+			<div class="d-flex align-items-center justify-content-between">
+			<h2  align="center" style="color:black;">Listado de Clientes</h2>
+			<a th:href="@{/usuarios}" class="btn btn-primary"
+						>Agregar Nuevo Cliente</a
+					>
+		</div>
 	
 		<table class="table">
 			<thead class="bg-primary">
@@ -111,7 +115,12 @@ body {
 					<td th:text="${clientes.email_cliente} "style="background-color:#F8F9F9"></td>
 					<td th:text="${clientes.nombre_cliente} "style="background-color:#F8F9F9"></td>
 					<td th:text="${clientes.telefono_cliente} "style="background-color:#F8F9F9"></td>
-					<td style="background-color:#F8F9F9"><a th:href="@{/editarcliente/}+${clientes.cedula_cliente}">Editar</a>
+					<td style="background-color:#F8F9F9"><a th:href="@{/clientes/actualizar}+${clientes.cedula_cliente}">Editar</a>
+						<a
+						th:href="@{/cliente/eliminar/}+${clientes.cedula_cliente}"
+						class="btn btn-danger"
+						>Eliminar</a
+					>
 					</td>
 				</tr>
 			</tbody>

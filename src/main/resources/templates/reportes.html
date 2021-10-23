@@ -9,26 +9,20 @@
 			crossorigin="anonymous"
 		/>
 		<title>Reportes</title>
+		<style> /*Código de imagen de fondo*/
+		body {
+		  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed; 
+		  background-size: 100% 80%;
+		}
+		</style>
 	</head>
 	<body>
-	
-<style> /*Código de imagen de fondo*/
-body {
-  background-image: url('https://st4.depositphotos.com/39002138/40904/i/450/depositphotos_409044106-stock-photo-shopping-basket-filled-fruits-vegetables.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 80%;
-}
-</style>
-	
-	
-	
 		<div>
-
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			  
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/">
 						<img
 							src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png"
 							width="40"
@@ -37,17 +31,10 @@ body {
 							alt=""
 						/>
 					</a>
-					
-					
-					
-					
 					<h3 class="text-center" style="color:white;"> 
 					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;							
 					&#9743  Tienda Genérica Grupo 2 (Clase 65)  &#9743
 					</h3>
-
-
-					
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -86,26 +73,37 @@ body {
 					</div>
 				</div>
 			</nav>
-			
-		<br /><br /><br /><br />
-		
-		<h2  align="center" style="color:black;">Seleccione el reporte a visualizar</h2>
-		
-		<br /><br /><br /><br /><br /><br /><br /><br /><br />
-			
-			
-					
-			
+			<div class="container mt-5">
     			<form class="text-center" th:action="@{/productos/upload}" method="POST" enctype="multipart/form-data">
-      				<a th:href="@{/usuarios/listar}" type="button" class="btn btn-primary">Listado de Usuarios</a>
-					<a th:href="@{/clientes/listar}" type="button" class="btn btn-primary">Listado de Clientes</a>
-					<a type="button" class="btn btn-primary">Ventas por Cliente</a>
-					<br/><br/><br/><br/><br/><br/><br/>
+					<div class="card-header">
+						<h2 align="center" style="color:black;"><b>SELECCIONE EL REPORTE</b></h2>
+					</div>
+					<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					<div class="card-body">
+
+						<a th:href="@{/usuarios/listar}" type="button" class="btn btn-primary">Listado de Usuarios</a>
+						<a th:href="@{/clientes/listar}" type="button" class="btn btn-primary">Listado de Clientes</a>
+						<a type="button" class="btn btn-primary">Ventas por Cliente</a>
+					</div>
+					<br/><br/><br/><br/><br/>
     			</form>
-    			
+			</div>
     			
 
-			<script
+			
+			
+			
+
+		
+			  <div class="text-center" style="color:black;">
+			  <br/><br/><br/><br/><br/><br/><br />
+			  &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
+			  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
+			  </div>
+			
+			
+		</div>
+		<script
 				src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 				integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 				crossorigin="anonymous"
@@ -115,17 +113,5 @@ body {
 				integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 				crossorigin="anonymous"
 			></script>
-			
-			
-
-		
-			  <div class="text-center" style="color:black;">
-			  <br/><br/><br/><br/><br/><br/>
-			  &copy; 2021 Tienda Generica. Clase # 65, Inc. | Autor: Grupo #2 
-			  <a class="navbar-brand" href="#">    <img src="https://www.bolsalea.com/blog/media/tienda-tradicional_opt.png" width="40" height="40" class="d-inline-block align-top" alt="">
-			  </div>
-			
-			
-		</div>
 	</body>
 </html>
