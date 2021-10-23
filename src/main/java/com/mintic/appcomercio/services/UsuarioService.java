@@ -7,6 +7,7 @@ import com.mintic.appcomercio.models.UsuarioModel;
 import com.mintic.appcomercio.repositories.UsuarioRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service // Establece la clase como servidor
@@ -16,6 +17,7 @@ public class UsuarioService {
     UsuarioRepository usuarioRepository; // Declara un nuevo objeto para el manejo de CRUD
 
     public UsuarioModel guardarUsuario(UsuarioModel usuario) { // Metodo para guardar cliente en tabla
+        // usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         return usuarioRepository.save(usuario); // Sentencia para guardar el cliente
     }
 
@@ -24,7 +26,7 @@ public class UsuarioService {
     }
 
     public Optional<UsuarioModel> obtenerPorCedula(Long cedula_usuario) { // Optional ayuda con el manejo de resultados
-                                                                         // null
+                                                                          // null
         return usuarioRepository.findById(cedula_usuario);
     }
 
