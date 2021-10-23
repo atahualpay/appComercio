@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.mintic.appcomercio.models.ClienteModel;
+import com.mintic.appcomercio.models.UsuarioModel;
 import com.mintic.appcomercio.services.ClienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class ClienteController {
         model.addAttribute("clientes", clientes);
         return "listarClientes";
     }
+    
+    @GetMapping
+    public String clientes(Model model) {
+        model.addAttribute("clientes", new ClienteModel());
+        return "formclientes";
+    }
 
     @PostMapping // Update de datos
     public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente) {
@@ -36,8 +43,11 @@ public class ClienteController {
     }
 
     @GetMapping(path = "{cedula_ciente}")
-    public Optional<ClienteModel> obtenerPorCedula(@PathVariable("cedula_ciente") Long cedula_ciente) {
-        return clienteService.obtenerPorCedula(cedula_ciente);
+    public String obtenerPorCedula(@PathVariable("cedula_ciente") Long cedula_ciente, Model model) {
+    	Optional<ClienteModel> cliente = clienteService.obtenerPorCedula(cedula_ciente);
+    	model.addAttribute("cliente", cliente);
+        model.addAttribute("bloqueado", "true");
+    	return "formclientes";
     }
 
     @DeleteMapping(path = "{cedula_ciente}")
