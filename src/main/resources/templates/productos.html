@@ -86,9 +86,16 @@ body {
 				</div>
 			</nav>
 			
-		<br /><br /><br /><br /><br /><br />
+		<br /><br />
 			
     			<form class="text-center" th:action="@{/productos/upload}" method="POST" enctype="multipart/form-data">
+      				<div class ="card-header">
+		     	<h2 align="center" style="color:black;"><b>AGREGAR PRODUCTOS</b></h2>
+		     </div>
+		     <br /><br /><br />
+		     <div class ="card-body">
+	       <div class="form-group">
+      				
       				<label for="file" style="color:black;"><b>Seleccione el archivo</b></label>
       				<input type="file" style="color:black;"name="file" id="file" accept=".csv" size="20"> <br /><br />    				
       				
@@ -97,8 +104,11 @@ body {
       				
       				
       				<div th:class="alert" th:classAppend="${clase}" th:text="${mensaje}"/>
-      				<br /><br /><br />
+<!--       				<br /><br /><br /> -->
       				<!-- <button class="button button2">Cargar</button><br/><br/><br/><br/><br/> -->
+      				<br /><br /><br />
+      				</div>
+      				</div>
     			</form>
     			
     			
