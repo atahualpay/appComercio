@@ -65,10 +65,10 @@ body {
 					>
 						<ul class="navbar-nav mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/usuarios}" style="color:white;"><strong>Usuarios</strong></a>
+								<a class="nav-link" th:href="@{/usuarios}"><strong>Usuarios</strong></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" th:href="@{/clientes}"><strong>Clientes</strong></a>
+								<a class="nav-link" th:href="@{/clientes}" style="color:white;"><strong>Clientes</strong></a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" th:href="@{/proveedores}"><strong>Proveedores</strong></a>
@@ -87,7 +87,7 @@ body {
 				</div>
 			</nav>
 			
-		
+		<br /><br />
 			
 
        <form th:action="@{/clientes/guardar}" th:object="${cliente}" method="POST">
@@ -102,8 +102,8 @@ body {
 				</div>
 				<br />
 				<div>
-					<label><b>Nombre Completo</b></label> 
-					<input th:field="*{nombre_cliente}" type="text" th:required="required" class="form-control" />
+					<label><b>Direccion Cliente</b></label> 
+					<input th:field="*{direccion_cliente}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 				<div>
@@ -112,20 +112,20 @@ body {
 				</div>
 				<br />
 				<div>
-					<label><b>Direccion</b></label> 
-					<input th:field="*{direccion_cliente}" type="text" th:required="required" class="form-control" />
+					<label><b>Nombre</b></label> 
+					<input th:field="*{nombre_cliente}" type="text" th:required="required" class="form-control" />
 				</div>
 				<br />
 				<div>
-					<label><b>telefono</b></label> 
-					<input th:field="*{telefono_cliente}" type="text" th:required="required" class="form-control" />
+					<label><b>Telefono</b></label> 
+					<input th:field="*{telefono_cliente}" type="number" th:required="required" class="form-control" />
 				</div>
 				<br />
 			</div>
 						
 			<div class ="card-footer"> 
 				<input type="submit" value="Guardar" class="btn btn-warning"/>
-				<a th:href="@{/clientes/listar}" class="btn btn-warning">Listar Clientes</a>
+				<a th:href="@{/proveedores/listar}" class="btn btn-warning">Listar Usuarios</a>
 			</div>
 			</div>
 		</form>

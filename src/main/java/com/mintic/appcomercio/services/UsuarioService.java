@@ -24,7 +24,7 @@ public class UsuarioService {
     }
 
     public Optional<UsuarioModel> obtenerPorCedula(Long cedula_usuario) { // Optional ayuda con el manejo de resultados
-                                                                          // null
+                                                                         // null
         return usuarioRepository.findById(cedula_usuario);
     }
 

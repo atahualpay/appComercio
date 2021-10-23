@@ -19,5 +19,5 @@ public class ClienteModel {
     public String email_cliente;
     public String nombre_cliente;
     public Long telefono_cliente;
-    
+
 }
