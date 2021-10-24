@@ -19,8 +19,12 @@ public class ClienteService { // Metodos a utilizar en la logica
         return clienteRepository.save(cliente); // Sentencia para guardar el cliente
     }
 
+    public Long contarClientes() {
+        return clienteRepository.count();
+    }
+
     public Optional<ClienteModel> obtenerPorCedula(Long cedula_cliente) { // Optional ayuda con el manejo de resultados
-                                                                         // null
+                                                                          // null
         return clienteRepository.findById(cedula_cliente);
     }
 

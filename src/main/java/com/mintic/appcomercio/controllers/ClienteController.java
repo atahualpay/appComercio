@@ -12,9 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller // Declara la clase como controlador
 @RequestMapping("/clientes") // Define la direccion del controlador
@@ -32,32 +31,40 @@ public class ClienteController {
     @GetMapping("/listar")
     public String listarclientes(Model model) {
         List<ClienteModel> clientes = clienteService.obtenerClientes();
+        Long count = clienteService.contarClientes();
         model.addAttribute("clientes", clientes);
+        model.addAttribute("cuenta", count);
         return "listarClientes";
     }
 
-    // @PostMapping // Update de datos
-    // public ClienteModel crearModificarCliente(@RequestBody ClienteModel cliente)
-    // {
-    // return clienteService.guardarCliente(cliente);
-    // }
+    @PostMapping(path = "/guardar")
+    public String crearModificarUsuario(ClienteModel cliente, RedirectAttributes model) {
+        clienteService.guardarCliente(cliente);
+        model.addFlashAttribute("mensaje", "Cliente " + cliente.cedula_cliente + " Guardado Exitosamente");
+        model.addFlashAttribute("clase", "alert-success");
+        return "redirect:/clientes/listar";
+    }
 
-//    @GetMapping(path = "{cedula_ciente}")
-//    public String obtenerPorCedula(@PathVariable("cedula_ciente") int cedula_ciente, Model model) {
-//        Optional<ClienteModel> cliente = clienteService.obtenerPorCedula(cedula_ciente);
-//        model.addAttribute("cliente", cliente);
-//        model.addAttribute("bloqueado", "true");
-//        return "formclientes";
-//    }
+    @GetMapping(path = "/actualizar/{cedula_cliente}")
+    public String obtenerPorCedula(@PathVariable Long cedula_cliente, Model model) {
+        Optional<ClienteModel> cliente = clienteService.obtenerPorCedula(cedula_cliente);
+        // return clienteService.obtenerPorCedula(cedula_cliente);
+        model.addAttribute("cliente", cliente);
+        model.addAttribute("bloqueado", "true");
+        return "formclientes";
+    }
 
-    // @DeleteMapping(path = "{cedula_ciente}")
-    // public String eliminarClientePorCedula(@PathVariable("cedula_ciente") Long
-    // cedula_ciente) {
-    // boolean eliminado = clienteService.eliminarCliente(cedula_ciente);
-
-    // if (eliminado)
-    // return "Cliente Eliminado";
-    // else
-    // return "Error Eliminando Cliente";
-    // }
+    @GetMapping(path = "/eliminar/{cedula_cliente}")
+    public String eliminarUsuarioPorCedula(@PathVariable Long cedula_cliente, RedirectAttributes model) {
+        boolean eliminado = clienteService.eliminarCliente(cedula_cliente);
+        if (eliminado) {
+            model.addFlashAttribute("mensaje", "Cliente Eliminado");
+            model.addFlashAttribute("clase", "alert-danger");
+            return "redirect:/clientes/listar";
+        } else {
+            model.addFlashAttribute("mensaje", "Error Eliminando Cliente");
+            model.addFlashAttribute("clase", "alert-warning");
+            return "redirect:/clientes/listar";
+        }
+    }
 }
