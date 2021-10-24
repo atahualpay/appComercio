@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+// import lombok.Data;
 
 @Entity // Persistencia de datos
 @Table(name = "clientes") // Entidad relacionada con la Tabla

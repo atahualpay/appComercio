@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Optional;
 
 import com.mintic.appcomercio.models.ProductosModel;
 import com.mintic.appcomercio.repositories.ProductosRepository;
@@ -35,6 +37,11 @@ public class ProductosService {
         }
     }
 
+    public ProductosModel guardarProducto(ProductosModel producto) { // Metodo para guardar cliente en tabla
+        // usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
+        return IProduct.save(producto); // Sentencia para guardar el cliente
+    }
+
     public void cargarProductos(String fileName) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("c:\\upload\\" + fileName));
@@ -53,6 +60,30 @@ public class ProductosService {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        }
+    }
+
+    public Optional<ProductosModel> obtenerPorCodigo(Long codigo_producto) { // Optional ayuda con el manejo de
+        // resultados
+        // null
+        return IProduct.findById(codigo_producto);
+    }
+
+    public Long contarUsuarios() {
+        return IProduct.count();
+    }
+
+    public ArrayList<ProductosModel> obtenerProductos() {
+        return (ArrayList<ProductosModel>) IProduct.findAll();
+    }
+
+    public boolean eliminarProducto(Long codigo_producto) {
+        try {
+            IProduct.deleteById(codigo_producto);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }
