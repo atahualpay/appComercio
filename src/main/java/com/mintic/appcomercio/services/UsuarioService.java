@@ -7,7 +7,7 @@ import com.mintic.appcomercio.models.UsuarioModel;
 import com.mintic.appcomercio.repositories.UsuarioRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+// import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service // Establece la clase como servidor

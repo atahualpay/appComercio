@@ -48,7 +48,7 @@
 					<ul class="navbar-nav mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/usuarios}"
-								style="color:white;"><strong>Usuarios</strong></a>
+								><strong>Usuarios</strong></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/clientes}"><strong>Clientes</strong></a>
@@ -57,7 +57,7 @@
 							<a class="nav-link" th:href="@{/proveedores}"><strong>Proveedores</strong></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" th:href="@{/productos}"><strong>Productos</strong></a>
+							<a class="nav-link" th:href="@{/productos}" style="color:white;"><strong>Productos</strong></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/ventas}"><strong>Ventas</strong></a>
@@ -72,43 +72,48 @@
 
 		<div class="container mt-5">
 
-			<form th:action="@{/usuarios/guardar}" th:object="${usuario}" method="POST">
+			<form th:action="@{/productos/guardar}" th:object="${producto}" method="POST">
 				<div class="card-header">
-					<h2 align="center" style="color:black;"><b>NUEVO USUARIO</b></h2>
+					<h2 align="center" style="color:black;"><b>NUEVO PRODUCTO</b></h2>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
 						<div>
-							<label><b>Cedula</b></label>
-							<input th:field="*{cedula_usuario}" type="number" class="form-control" th:required="required"
+							<label><b>Codigo Producto</b></label>
+							<input th:field="*{codigo_producto}" type="number" class="form-control" th:required="required"
 							th:readonly="${bloqueado != null AND bloqueado == 'true'}">
 						</div>
 						<br />
 						<div>
-							<label><b>Nombre Completo</b></label>
-							<input th:field="*{nombre_usuario}" type="text" th:required="required" class="form-control" />
+							<label><b>Iva Compra</b></label>
+							<input th:field="*{ivacompra}" type="number" th:required="required" class="form-control" />
 						</div>
 						<br />
 						<div>
-							<label><b>Correo Electronico</b></label>
-							<input th:field="*{email_usuario}" type="text" th:required="required" class="form-control" />
+							<label><b>NIT Proveedor</b></label>
+							<input th:field="*{nitproveedor}" type="number" th:required="required" class="form-control" />
 						</div>
 						<br />
 						<div>
-							<label><b>Usuario</b></label>
-							<input th:field="*{usuario}" type="text" th:required="required" class="form-control" />
+							<label><b>Nombre Producto</b></label>
+							<input th:field="*{nombre_producto}" type="text" th:required="required" class="form-control" />
 						</div>
 						<br />
 						<div>
-							<label><b>Password</b></label>
-							<input th:field="*{password}" type="text" th:required="required" class="form-control" />
+							<label><b>Precio Compra</b></label>
+							<input th:field="*{precio_compra}" type="number" th:required="required" class="form-control" />
+						</div>
+						<br />
+						<div>
+							<label><b>Precio Venta</b></label>
+							<input th:field="*{precio_venta}" type="number" th:required="required" class="form-control" />
 						</div>
 						<br />
 				</div>
 				</div>
 				<div class="card-footer d-flex justify-content-evenly">
 					<input type="submit" value="Guardar" class="btn btn-warning btn-lg" />
-					<a th:href="@{/usuarios/listar}" class="btn btn-warning btn-lg">Listar Usuarios</a>
+					<a th:href="@{/productos/listar}" class="btn btn-warning btn-lg">Listar Productos</a>
 				</div>
 			</form>
 		</div>	
